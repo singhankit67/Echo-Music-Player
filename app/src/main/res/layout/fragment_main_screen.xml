@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:clickable="true"
+        android:layout_height="match_parent"
+        android:id="@+id/content_main">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/visibleLayout">
+        <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+        android:id="@+id/contentMain"
+                                                   android:background="@drawable/bg_gradient1">
+        </androidx.recyclerview.widget.RecyclerView>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="100dp"
+        android:id="@+id/hiddenBarMainScreen"
+                        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary">
+            <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="47dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/playPauseButton"
+            android:background="@drawable/pause_icon"/>
+            <ImageView android:layout_width="50dp" android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:background="@drawable/now_playing_bar_eq_image"
+            android:id="@+id/defaultMusic"
+            android:minHeight="0dp"
+            android:minWidth="0dp"/>
+            <!--for now playing button-->
+            <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:minWidth="0dp"
+                         android:minHeight="0dp"
+
+                         android:layout_toLeftOf="@+id/playPauseButton"
+                         android:layout_marginRight="116dp"
+                         android:layout_centerVertical="true"
+                         android:id="@+id/previousbuttons"
+                         android:background="@drawable/play_previous_icon"/>
+            <ImageButton android:layout_width="wrap_content"
+                         android:layout_alignParentRight="true"
+                         android:minWidth="0dp"
+                         android:minHeight="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_centerVertical="true"
+                         android:layout_marginRight="13dp"
+                         android:id="@+id/nextbuttons"
+                         android:background="@drawable/play_next_icon"
+            />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Now Playing"
+            android:textColor="#efebd8"
+            android:textStyle="bold|italic"
+            android:layout_toRightOf="@+id/defaultMusic"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/nowPlaying"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:id="@+id/songTitleMainScreen"
+                      android:layout_below="@+id/nowPlaying"
+                      android:ellipsize="end"
+                      android:maxLines="1"
+                      android:maxWidth="120dp"
+                      android:singleLine="true"
+                      android:text="Play a song"
+                      android:textColor="#ffffff"
+                      android:textStyle="bold|italic"
+                      android:layout_toRightOf="@+id/defaultMusic"
+                      android:layout_alignStart="@+id/nowPlaying"
+                      android:layout_alignLeft="@+id/nowPlaying"
+                      android:textAppearance="?android:attr/textAppearance"
+                      android:layout_marginTop="5dp"
+            />
+                      <!--ellipse ends the line with 3 dots-->
+
+                      <!--then yhe music is playing</RelativeLayout>&ndash;&gt;-->
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:visibility="invisible"
+    android:id="@+id/noSongs">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="you currently have no songs to play"
+        android:textColor="#000000"/>
+    </RelativeLayout>
+    <!--this is to appear a blank screen if one song is also not downloaded-->
+</RelativeLayout>

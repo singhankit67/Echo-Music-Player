@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f8b195</color>
+    <color name="colorPrimaryDark">#f8b195</color>
+    <color name="colorAccent">#FF9900</color>
+    <color name="one">#f67280</color>
+    <color name="second">#c06c84</color>
+    <color name="third">#6c5b7b</color>
+    <color name="fourth">#355c7d</color>
+    <array name="rainbow">
+        <item> @color/one</item>
+        <item> @color/second</item>
+        <item> @color/third</item>
+        <item> @color/fourth</item>
+    </array>
+    <color name="fifth">#ff0000</color>
+    <color name="sixth">#dc0000</color>
+    <color name="seventh">#a60000</color>
+    <color name="eight">#840000</color>
+    <array name="rainbow1">
+        <item> @color/fifth</item>
+        <item> @color/sixth</item>
+        <item> @color/seventh</item>
+        <item> @color/eight</item>
+    </array>
+
+    <color name="black_overlay">#66000000</color>
+</resources>
